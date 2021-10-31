@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>DOM Manipulation</title>
+</head>
+<body class='stack-lg'>
+
+  <h1 class='center'>DOM Manipulation</h1>
+  
+   <div class="to-do-section">
+
+    <h2 class='center'>To Do List</h2>
+
+    <ul class='list stack-md'>
+      <li class='list__item'>buy milk</li>
+      <li class='list__item'>read a book</li>
+      <li class='list__item'>play the guitar</li>
+      <li class='list__item'>pay the bills</li>
+    </ul>
+
+    <br>
+
+    <div class="list__buttons">
+
+      <button class='list__btn list__btn--remove'>REMOVE ITEM</button>
+
+      <button class="list__btn list__btn--add">ADD ITEM</button>
+
+    </div>
+
+    <label for="list__input">Add new item</label>
+    <input type="text" name='list__input' id='list__input'>
+
+  </div>
+
+<script src='scripts.js'></script>
+</body>
+</html>
