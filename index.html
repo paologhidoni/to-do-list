@@ -11,32 +11,38 @@
 
   <h1 class='center'>DOM Manipulation</h1>
   
-   <div class="to-do-section">
+  <section class="to-do-section stack-lg">
 
     <h2 class='center'>To Do List</h2>
 
-    <ul class='list stack-md'>
-      <li class='list__item'>buy milk</li>
-      <li class='list__item'>read a book</li>
-      <li class='list__item'>play the guitar</li>
-      <li class='list__item'>pay the bills</li>
-    </ul>
+    <div class='list'>
 
-    <br>
+      <div class="list__controls">
 
-    <div class="list__buttons">
+        <div class="list__control stack-sm">
+          <label for="">Select an item to remove it</label>
+          <button class='list__btn list__btn--remove'>REMOVE ITEM</button>
+        </div>
 
-      <button class='list__btn list__btn--remove'>REMOVE ITEM</button>
+        <div class="list__control stack-sm">
+          <label for="list__input">Add new item *</label>
+          <input type="text" name='list__input' id='list__input' class='list__input' required>
+          <button class="list__btn list__btn--add">ADD ITEM</button>
+        </div>
+        
+      </div>
 
-      <button class="list__btn list__btn--add">ADD ITEM</button>
+      <ul class='list__entries'>
+        <li class='list__item'>buy milk</li>
+        <li class='list__item'>read a book</li>
+        <li class='list__item'>play the guitar</li>
+        <li class='list__item'>pay the bills</li>
+      </ul>
 
     </div>
+  
+  </section>
 
-    <label for="list__input">Add new item</label>
-    <input type="text" name='list__input' id='list__input'>
-
-  </div>
-
-<script src='scripts.js'></script>
+  <script src='scripts.js'></script>
 </body>
 </html>
