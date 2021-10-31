@@ -2,7 +2,8 @@
 
 const removeItemBtn = document.querySelector('.list__btn--remove');
 const addItemBtn = document.querySelector('.list__btn--add');
-const list = document.querySelector('.list');
+const list = document.querySelector('.list__entries');
+const listInput = document.getElementById('list__input');
 
 
 /* FUNCTIONS */
@@ -14,11 +15,17 @@ function deleteItem() {
 }
 
 // Function to create a new list item
-function createItem(newListItemText) {
-  const newListItem = document.createElement('li');
-  newListItem.classList.add('list__item');
-  newListItem.textContent = `${newListItemText}`;
-  list.prepend(newListItem);
+function createItem() {
+  if(listInput.value !== '') {
+    const newListItem = document.createElement('li');
+    newListItem.classList.add('list__item');
+    newListItem.textContent = listInput.value;
+    list.prepend(newListItem);
+    listInput.value = '';
+  } else {
+    listInput.placeholder = 'Describe your task';
+  }
+
 }
 
 
@@ -36,4 +43,8 @@ list.addEventListener('click', (e) => {
 removeItemBtn.addEventListener('click', deleteItem);
 
 addItemBtn.addEventListener('click', createItem);
+
+window.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter') createItem();
+})
 
